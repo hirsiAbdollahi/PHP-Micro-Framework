@@ -1,0 +1,40 @@
+{# hérite de base #}
+{% extends "base.html.twig" %}
+
+{# remplace le contenu du bloc title de base.html.twig #}
+{% block title %}Accueil{% endblock %}
+
+
+{% block body %}
+    <div class="container border mt-4 p-4 bg-light">
+        <h1 class="display-1 text-center">
+            <i class="fas fa-hashtag"></i>
+            Hash
+        </h1>
+
+        <div class="row">
+            <div class="col border-right border-dark">
+                <p class="text-center">
+                    Pas de compte ? Inscris-toi !<br>
+
+
+                    {# utilisation de urlFor() pour générer des liens #}
+                    <a href="{{ urlFor('register') }}" class="btn btn-success">
+                        <i class="far fa-hand-point-right"></i>
+                        Inscription
+                    </a>
+                </p>
+            </div>
+
+            <div class="col">
+                <p class="text-center">
+                    Déjà inscrit ? Connectes-toi !<br>
+                    <a href="{{ urlFor('login') }}" class="btn btn-info">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Connexion
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

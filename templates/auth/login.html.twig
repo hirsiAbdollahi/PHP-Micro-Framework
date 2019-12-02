@@ -1,0 +1,7 @@
+<h1>Connexion</h1>
+
+{# getFlashes() retourne un tableau #}
+{% for msg in getFlashes() %}
+    {# msg représente 1 message flash #}
+    {{ msg.type }}: {{ msg.message }}<br>
+{% endfor %}

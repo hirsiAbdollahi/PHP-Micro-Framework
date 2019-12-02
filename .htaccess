@@ -1,0 +1,10 @@
+# Activer la réécriture d'URL
+RewriteEngine On
+
+# Conditions de réécriture
+#   Si le fichier demandé n'existe pas
+#   S'il n'est pas non plus un dossier
+#   Redirection vers le Front Controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

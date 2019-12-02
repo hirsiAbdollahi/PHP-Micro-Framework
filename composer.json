@@ -1,0 +1,25 @@
+{
+    "name": "aymdev/hash",
+    "description": "Cours sur Slim 4",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Aymeric Mayeux",
+            "email": "aymericmayeux@evogue.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "^4.3",
+        "slim/psr7": "^0.6.0",
+        "php-di/slim-bridge": "^3.0",
+        "twig/twig": "^3.0",
+        "catfan/medoo": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hash\\": "src/"
+        }
+    }
+}
